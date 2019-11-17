@@ -87,19 +87,26 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
 azure crea junto a la maquina 6 recuersos los cuales son: 
-  *Cuenta de almacenamiento
-  *Direccion IP publica
-  *Grupo de seguridad de red
-  *Interfaz de red
-  *Disco
-  *Red virtual
+  * Cuenta de almacenamiento
+  * Direccion IP publica
+  * Grupo de seguridad de red
+  * Interfaz de red
+  * Disco
+  * Red virtual
 2. ¿Brevemente describa para qué sirve cada recurso?
-  *Cuenta de almacenamiento
-  *Direccion IP publica
-  *Grupo de seguridad de red
-  *Interfaz de red
-  *Disco
-  *Red virtual
+  * Cuenta de almacenamiento
+        
+  * Direccion IP publica
+    Esta direccion sera asignada al crear la maquina virtual en azure y nos permitira comunicarnos con la maquina virtual desde cualquier parte del mundo. 
+  * Grupo de seguridad de red
+      
+  * Interfaz de red
+     Este recurso permite que una máquina virtual de Azure se comunique con los recursos de Internet, Azure y locales. al crear una maquina virtual en azure este crea una interfaz de red con una configuracion predeterminada. 
+  * Disco
+    Este recurso es un disco duro virtual, se encarga basicamente de almacenar para este caso la maquina virtual que se a creado en azure. 
+  * Red virtual
+    Es el bloque de creación fundamental de una red privada en Azure.  permite muchos tipos de recursos de Azure como las           Máquinas Virtuales , se comuniquen de forma segura  entre sí,con el Internet y con redes locales.    
+   
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
 
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
