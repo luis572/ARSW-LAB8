@@ -85,7 +85,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 **Preguntas**
 
-1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
+1. ***¿Cuántos y cuáles recursos crea Azure junto con la VM?
 azure crea junto a la maquina 6 recuersos los cuales son: 
   * Cuenta de almacenamiento
   * Direccion IP publica
@@ -95,8 +95,10 @@ azure crea junto a la maquina 6 recuersos los cuales son:
   * Red virtual
   creacion de maquina virtual:
   ![Imágen 3](images/part1/1.JPG)
-2. ¿Brevemente describa para qué sirve cada recurso?
-  * Cuenta de almacenamiento: este recurso tiene como funcion principal alojar y/o contener  diversos objetos de almacenamientos ofrecidos por azure entre los cuales se encuentran archivos, colas, blobs, discos, entre otros. tambien provee de nombre unico el cual lo que hara sera que sea accesible desde cualquier lugar del mundo mediante los protocolos http y https. 
+2. ***¿Brevemente describa para qué sirve cada recurso?
+
+  * **Cuenta de almacenamiento:**
+  este recurso tiene como funcion principal alojar y/o contener  diversos objetos de almacenamientos ofrecidos por azure entre los cuales se encuentran archivos, colas, blobs, discos, entre otros. tambien provee de nombre unico el cual lo que hara sera que sea accesible desde cualquier lugar del mundo mediante los protocolos http y https. 
         
   * **Direccion IP publica:** 
     Esta direccion sera asignada al crear la maquina virtual en azure y nos permitira comunicarnos con la maquina virtual desde cualquier parte del mundo. 
@@ -109,15 +111,16 @@ azure crea junto a la maquina 6 recuersos los cuales son:
   * **Red virtual :** 
     Es el bloque de creación fundamental de una red privada en Azure.  permite muchos tipos de recursos de Azure como las           Máquinas Virtuales , se comuniquen de forma segura  entre sí,con el Internet y con redes locales.    
    
-3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+3. ***¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
   la aplicacion se cae o cierra el servicio debido a que el proceso de este esta vinculado a la conexion ssh y al cerrar esta el proceso da por terminado. 
   la creaccion de Inbound port rule nos permitira asignarle al servicio un puerto en especifico para que todo el trafico de este pase por dicho puerto. 
-4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+4. ***Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
    **Tabla De Tiempos:**
    ![Imágen 3](images/part1/11.JPG)
+   
    Este se demora ya que el servicio no tiene un "cache" el cual le permita mantener en memoria los resultados o los numeros de  la serie ya calculados.
       
-5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+5. ***Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
    **consumo  cantidad de CPU para B1ls:**
    ![Imágen 3](images/part1/8.JPG)
    **consumo  cantidad de CPU para  B2ms:**
@@ -125,7 +128,7 @@ azure crea junto a la maquina 6 recuersos los cuales son:
    
 al no tener alojado en memoria los restultados y/o los numeros de la serie ya calculados este tiene que calcularlos nuevamente por cada solicitud.incrementando el uso de recursos. 
 
-6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
+6. ***Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
       ***Standard B1ls***
       ![Imágen 3](images/part1/9.1.JPG)
@@ -147,15 +150,16 @@ al no tener alojado en memoria los restultados y/o los numeros de la serie ya ca
       ![Imágen 3](images/part1/10.v4.JPG)
       
       
-7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
+7. ***¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?***
 
-8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
-
-9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
-
-10. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
-
-11. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+8. ***¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?***
+   Al aumentar el tamaño de la vm disminuimos en  el consumo de la cpu, y hubo un leve disminucion 
+   en los tiempo de respuesta, pero para determinar la viabilidad de la solucion toca mirar la relacion de costo economico con el beneficio que este me brinda. 
+9. ***¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?***
+  Al aplicar el cambio de memoria deberemos de reiniciar y/o apagar la maquina, lo cual generara perdida de disponibilidad por un periodo de tiempo.Posteriormente deberemos de volver a subir el servicio de FibonacciApp. 
+10. ***¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+   si hubo una mejora en el consumo de cpu, esto se debe a que la maquina esto se debe a que con mas nucleos de procesamiento se pueden procesar mas solicitudes y concecuentemente evitando que las conexiones se cierren. 
+11.***Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
 ### Parte 2 - Escalabilidad horizontal
 
