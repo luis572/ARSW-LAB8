@@ -116,7 +116,8 @@ azure crea junto a la maquina 6 recuersos los cuales son:
   la aplicacion se cae o cierra el servicio debido a que el proceso de este esta vinculado a la conexion ssh y al cerrar esta el proceso da por terminado. 
   la creaccion de Inbound port rule nos permitira asignarle al servicio un puerto en especifico para que todo el trafico de este pase por dicho puerto. 
   
-4. ***Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+4. ***Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.***
+
    **Tabla De Tiempos:**
    
    ![Imágen 3](images/part1/11.JPG)
@@ -135,7 +136,8 @@ azure crea junto a la maquina 6 recuersos los cuales son:
    
 al no tener alojado en memoria los restultados y/o los numeros de la serie ya calculados este tiene que calcularlos nuevamente por cada solicitud.incrementando el uso de recursos. 
 
-6. ***Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
+6. ***Adjunte la imagen del resumen de la ejecución de Postman. Interprete: *** 
+
     * Tiempos de ejecución de cada petición.
       ***Standard B1ls***
       
@@ -172,7 +174,8 @@ al no tener alojado en memoria los restultados y/o los numeros de la serie ya ca
    en los tiempo de respuesta, pero para determinar la viabilidad de la solucion toca mirar la relacion de costo economico con el beneficio que este me brinda. 
 9. ***¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?***
   Al aplicar el cambio de memoria deberemos de reiniciar y/o apagar la maquina, lo cual generara perdida de disponibilidad por un periodo de tiempo.Posteriormente deberemos de volver a subir el servicio de FibonacciApp. 
-10. ***¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+10. ***¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?***
+
    si hubo una mejora en el consumo de cpu, esto se debe a que la maquina esto se debe a que con mas nucleos de procesamiento se pueden procesar mas solicitudes y concecuentemente evitando que las conexiones se cierren. 
 11.***Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
