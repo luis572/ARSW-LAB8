@@ -173,7 +173,7 @@ al no tener alojado en memoria los restultados y/o los numeros de la serie ya ca
       ![Imágen 3](images/part1/b1ls.JPG)
       ***B2ms***
       
-      ![Imágen 3](images/part1/1b2ms.JPG)
+      ![Imágen 3](images/part1/b2ms.JPG)
       
 8. ***¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?***
    Al aumentar el tamaño de la vm disminuimos en  el consumo de la cpu, y hubo un leve disminucion 
