@@ -93,30 +93,60 @@ azure crea junto a la maquina 6 recuersos los cuales son:
   * Interfaz de red
   * Disco
   * Red virtual
+  creacion de maquina virtual:
+  ![Imágen 3](images/part1/1.JPG)
 2. ¿Brevemente describa para qué sirve cada recurso?
-  * Cuenta de almacenamiento
+  * Cuenta de almacenamiento: este recurso tiene como funcion principal alojar y/o contener  diversos objetos de almacenamientos ofrecidos por azure entre los cuales se encuentran archivos, colas, blobs, discos, entre otros. tambien provee de nombre unico el cual lo que hara sera que sea accesible desde cualquier lugar del mundo mediante los protocolos http y https. 
         
-  * Direccion IP publica
+  * **Direccion IP publica:** 
     Esta direccion sera asignada al crear la maquina virtual en azure y nos permitira comunicarnos con la maquina virtual desde cualquier parte del mundo. 
-  * Grupo de seguridad de red
-      
-  * Interfaz de red
+  * **Grupo de seguridad de red:** 
+ este recurso tiene como funcion  filtrar el tráfico de red hacia y desde los recursos Azure en una red virtual Azure con un grupo de seguridad de red.
+  * **Interfaz de red :** 
      Este recurso permite que una máquina virtual de Azure se comunique con los recursos de Internet, Azure y locales. al crear una maquina virtual en azure este crea una interfaz de red con una configuracion predeterminada. 
-  * Disco
+  * **Disco :**
     Este recurso es un disco duro virtual, se encarga basicamente de almacenar para este caso la maquina virtual que se a creado en azure. 
-  * Red virtual
+  * **Red virtual :** 
     Es el bloque de creación fundamental de una red privada en Azure.  permite muchos tipos de recursos de Azure como las           Máquinas Virtuales , se comuniquen de forma segura  entre sí,con el Internet y con redes locales.    
    
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
-
+  la aplicacion se cae o cierra el servicio debido a que el proceso de este esta vinculado a la conexion ssh y al cerrar esta el proceso da por terminado. 
+  la creaccion de Inbound port rule nos permitira asignarle al servicio un puerto en especifico para que todo el trafico de este pase por dicho puerto. 
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
-
+   **Tabla De Tiempos:**
+   ![Imágen 3](images/part1/11.JPG)
+   Este se demora ya que el servicio no tiene un "cache" el cual le permita mantener en memoria los resultados o los numeros de  la serie ya calculados.
+      
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+   **consumo  cantidad de CPU para B1ls:**
+   ![Imágen 3](images/part1/8.JPG)
+   **consumo  cantidad de CPU para  B2ms:**
+   ![Imágen 3](images/part1/10.v5.JPG)
+   
+al no tener alojado en memoria los restultados y/o los numeros de la serie ya calculados este tiene que calcularlos nuevamente por cada solicitud.incrementando el uso de recursos. 
 
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
+      ***Standard B1ls***
+      ![Imágen 3](images/part1/9.1.JPG)
+      los tiempos de ejecucion promedio son de 34.7s, el maximo tiempo que se tomo en responder es de 55 segundos 
+     
+      ***B2ms***
+      los tiempos de ejecucion promedio son de 37.7s, el maximo tiempo que se tomo en responder es de 55.3 segundos 
+      ![Imágen 3](images/part1/10.v3.JPG)
+      
     * Si hubo fallos documentelos y explique.
-    
+      ***Standard B1ls***
+       ocurrieron  4 fallos esto se debe a que el servidor  cierra la conexion debido a que esta sobrecargada de peticiones.
+      ![Imágen 3](images/part1/9.2.JPG)
+      
+      ***B2ms***
+      ocurrieron  3 fallos esto se debe a que el servidor  cierra la conexion debido a que esta sobrecargada de peticiones.
+
+
+      ![Imágen 3](images/part1/10.v4.JPG)
+      
+      
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
