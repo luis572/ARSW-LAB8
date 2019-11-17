@@ -188,11 +188,11 @@ al no tener alojado en memoria los restultados y/o los numeros de la serie ya ca
    
    solicitudes: 
    
-   [Imágen 3](images/part1/solicitudes.JPG)
+   [Imágen 2](images/part1/solicitudes.JPG)
    
    comportamiento: 
    
-   [Imágen 3](images/part1/Captura.JPG)
+   [Imágen 2](images/part1/Captura.JPG)
    
    El comportamiento el similar a las solicitudes anteriores como se evidencia en la imagen. 
    
