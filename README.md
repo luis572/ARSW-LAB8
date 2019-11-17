@@ -177,7 +177,8 @@ al no tener alojado en memoria los restultados y/o los numeros de la serie ya ca
 10. ***¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?***
 
    si hubo una mejora en el consumo de cpu, esto se debe a que la maquina esto se debe a que con mas nucleos de procesamiento se pueden procesar mas solicitudes y concecuentemente evitando que las conexiones se cierren. 
-11.***Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+
+11.***Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?.***
 
 ### Parte 2 - Escalabilidad horizontal
 
