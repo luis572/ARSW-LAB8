@@ -85,7 +85,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 **Preguntas**
 
-1. ***¿Cuántos y cuáles recursos crea Azure junto con la VM?
+1. ***¿Cuántos y cuáles recursos crea Azure junto con la VM?***
 azure crea junto a la maquina 6 recuersos los cuales son: 
   * Cuenta de almacenamiento
   * Direccion IP publica
