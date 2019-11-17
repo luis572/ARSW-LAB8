@@ -168,7 +168,13 @@ al no tener alojado en memoria los restultados y/o los numeros de la serie ya ca
       
       
 7. ***¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?***
-
+      ***Standard B1ls***
+      
+      ![Imágen 3](images/part1/b1ls.JPG)
+      ***B2ms***
+      
+      ![Imágen 3](images/part1/1b2ms.JPG)
+      
 8. ***¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?***
    Al aumentar el tamaño de la vm disminuimos en  el consumo de la cpu, y hubo un leve disminucion 
    en los tiempo de respuesta, pero para determinar la viabilidad de la solucion toca mirar la relacion de costo economico con el beneficio que este me brinda. 
@@ -178,8 +184,18 @@ al no tener alojado en memoria los restultados y/o los numeros de la serie ya ca
 
    si hubo una mejora en el consumo de cpu, esto se debe a que la maquina esto se debe a que con mas nucleos de procesamiento se pueden procesar mas solicitudes y concecuentemente evitando que las conexiones se cierren. 
 
-11.***Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?.***
-
+11.***Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?.*** 
+   
+   solicitudes: 
+   
+   [Imágen 3](images/part1/solicitudes.JPG)
+   
+   comportamiento: 
+   
+   [Imágen 3](images/part1/Captura.JPG)
+   
+   El comportamiento el similar a las solicitudes anteriores como se evidencia en la imagen. 
+   
 ### Parte 2 - Escalabilidad horizontal
 
 #### Crear el Balanceador de Carga
